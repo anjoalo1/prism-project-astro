@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+const micodigo = `<html>
+						<head>
+
+						</head>
+						<body>
+							<!-- Esto es un comentario de una o varias lineas de codigo progarnd hasta donde llega la linea -->
+							<p>hola mundo</p>
+						</body>
+					</html>
+
+`;
+
+---
+
+<Layout title="Probando prismjs">
+	<main>	
+		<div class="code-css">
+			<pre class="language-javascript line-numbers" >
+				<code>
+					// Esto es un comentario de una línea en JavaScript
+					let nombre = "Jose";
+					let edad = 30;
+					console.log("Hola, mi nombre es " + nombre + " y tengo " + edad + " años.");
+				</code>
+			</pre>
+		</div>
+<hr>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nobis autem fugit nulla dolores cum dicta odit, eligendi labore eaque deserunt, mollitia pariatur at alias iure illo? Saepe, itaque optio!</p>
+		<div class="code-css">
+			<pre class="language-html line-numbers" >
+				<code>
+					{micodigo}
+				</code>
+			</pre>
+		</div>
+	</main>
+</Layout>
+
+<script src="../scripts/mifile.js"></script>
+
+<style>
+
+	.code-css{
+		font-size: 1rem;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+
+
+
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
